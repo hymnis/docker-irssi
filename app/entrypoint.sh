@@ -29,5 +29,5 @@ chown user:user -R "$HOME"
 
 echo "Starting irssi in screen session ($SCREEN_NAME) $*"
 export TERM='linux'
-su user -c "script -q -c 'screen -S $SCREEN_NAME -d -m irssi $*' /dev/null"
+su user -c "script -q -c 'screen -S $SCREEN_NAME -m irssi $*' /dev/null"
 
