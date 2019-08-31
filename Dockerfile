@@ -1,5 +1,9 @@
-FROM irssi:latest
+FROM irssi:1.2.2
 MAINTAINER hymnis <hymnis@plazed.net>
+
+ARG VCS_REF
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="e.g. https://github.com/hymnis/docker-irssi"
 
 ENV SCREEN_NAME=irc
 ENV SCREEN_FLAGS=-x
