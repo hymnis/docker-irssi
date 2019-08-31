@@ -12,7 +12,6 @@ if [ -n "$AUTHORIZED_KEYS" ]; then
   touch "$KEYS_FILE"
   chmod 600 "$KEYS_FILE"
 
-  # internal field separator, required to split on \n
   IFS=$'\n'
 
   for key in $(echo "${AUTHORIZED_KEYS}" | tr "," "\n"); do
@@ -30,5 +29,5 @@ chown user:user -R "$HOME"
 
 echo "Starting irssi in screen session ($SCREEN_NAME) $*"
 export TERM='linux'
-su user -c "script -q -c 'screen -S $SCREEN_NAME -m irssi $*' /dev/null"
+su user -c "script -q -c 'screen -S $SCREEN_NAME -d -m irssi $*' /dev/null"
 

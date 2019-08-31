@@ -1,9 +1,17 @@
-FROM irssi:1.2.2
-MAINTAINER hymnis <hymnis@plazed.net>
+ARG VERSION
+FROM irssi:$VERSION
 
+ARG BUILD_DATE
 ARG VCS_REF
-LABEL org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="e.g. https://github.com/hymnis/docker-irssi"
+ARG VERSION
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.name="hymnis/docker-irssi" \
+      org.label-schema.description="Running irssi in a screen session with ssh and mosh access." \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/hymnis/docker-irssi" \
+      org.label-schema.version=$VERSION \
+      org.label-schema.schema-version="1.0"
+LABEL maintainer="hymnis@plazed.net"
 
 ENV SCREEN_NAME=irc
 ENV SCREEN_FLAGS=-x

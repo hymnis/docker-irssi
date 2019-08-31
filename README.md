@@ -10,10 +10,10 @@ Running `irssi` in a `screen` session with ssh and mosh access.
 
 ## Usage
 
-Start the docker container with your public key:
+Start the docker container with your public key(s):
 
 ```sh
-docker run -d -p 2222:22 -p 2233:60000 -e AUTHORIZED_KEYS="ssh-rsa AAAA...== user@host" -e TZ="Europe/Stockholm" -v <irssi conf dir>:/home/user/.irssi:rw hymnis/docker-irssi
+docker run -d -p 2222:22 -p 2233:60000/udp -e AUTHORIZED_KEYS="ssh-rsa AAAA...== user@host" -e TZ="Europe/Stockholm" -v <irssi conf dir>:/home/user/.irssi:rw hymnis/docker-irssi
 ```
 
 ### Required
@@ -33,11 +33,11 @@ docker run -d -p 2222:22 -p 2233:60000 -e AUTHORIZED_KEYS="ssh-rsa AAAA...== use
 Use ssh or mosh to connect to the host on specified port.
 
 ```sh
-ssh -p 2222 user@host
+ssh -p 2222 user@<host>
 ```
 or
 ```sh
-mosh -p 2233 --ssh="ssh -p 2222" user@host
+mosh -p 2233 --ssh="ssh -p 2222" user@<host>
 ```
 
 ## License
