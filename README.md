@@ -1,8 +1,8 @@
 # docker-irssi
 
-[![Docker Version](https://images.microbadger.com/badges/version/hymnis/docker-irssi.svg)](https://microbadger.com/images/hymnis/docker-irssi)
-[![Docker Image](https://images.microbadger.com/badges/image/hymnis/docker-irssi.svg)](https://microbadger.com/images/hymnis/docker-irssi)
-[![Docker Pulls](https://img.shields.io/docker/pulls/hymnis/docker-irssi.svg)](https://hub.docker.com/r/hymnis/dockerirssi/)
+[![Docker Version](https://img.shields.io/docker/v/hymnis/docker-irssi?sort=semver)](https://hub.docker.com/r/hymnis/docker-irssi/)
+[![Docker Size](https://img.shields.io/docker/image-size/hymnis/docker-irssi?sort=semver)](https://hub.docker.com/r/hymnis/docker-irssi/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/hymnis/docker-irssi.svg)](https://hub.docker.com/r/hymnis/docker-irssi/)
 [![Docker Stars](https://img.shields.io/docker/stars/hymnis/docker-irssi.svg)](https://hub.docker.com/r/hymnis/docker-irssi/)
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
